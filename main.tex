@@ -1,0 +1,166 @@
+%-------------------------
+% Resume in Latex
+% Author : Tejas Khairnar
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[letter,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    linkcolor=Violet,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome}
+\usepackage[most]{tcolorbox}
+
+
+% Set the margins
+\geometry{left=0.85cm, top=0.8cm, right=0.85cm, bottom=0.2cm}
+
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \hspace{-3mm}{#1}:\hspace{1mm} & \hspace*{0pt}\hfill{\footnotesize{ #3}} \vspace{-0.5mm}\\ \hspace{-2.9mm}#2 
+    \end{tabular*}
+    \vspace{0mm}
+}
+
+\newcommand{\resumeExp}[4]{
+\vspace{0mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \hspace{-4.4mm} \small\textbf{#1} & {\footnotesize{\emph{#3}}}\vspace{-1.2mm}\\
+        \hspace{-4.3mm} \footnotesize{\text{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-6.1mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \hspace{-4.4mm} \small\textbf{#1} & {\footnotesize{#3}}\vspace{-1mm}\\
+        \hspace{-4.3mm} \footnotesize{\text{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-6.5mm}
+}
+
+\newcommand{\resumeEdu}[4]{
+\vspace{0mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \hspace{-4.3mm} \small\textbf{#1} & \footnotesize{\emph{#3}}\vspace{-1mm} \\
+        \hspace{-4.3mm} \footnotesize{#2} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-3.2mm}
+}
+
+\newcommand{\resumeAchieve}[3]
+{
+\hspace{-3.1mm}\textbf{ #1} & {#2} & \hspace{3mm}\footnotesize{#3}
+\vspace{0mm}\\
+}
+
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm,itemsep=-2.5mm]}
+
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=1ex, rightmargin=1ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-1.5mm}}
+
+\renewcommand{\arraystretch}{1}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+
+\newcommand{\name}{Sankalp Sangle} % Your Name
+\newcommand{\course}{B.Tech -Computer Science and Engineering} % Your Course
+\newcommand{\roll}{xxxxxxxx} % Your Roll No.
+\newcommand{\phone}{(240)-810-9765} % Your Phone Number
+\newcommand{\emaila}{sankalpsangle98@gmail.com} %Email 1
+\newcommand{\github}{sankalp-sangle} %Github
+\newcommand{\website}{https://sankalpsangle.com} %Website
+\newcommand{\linkedin}{sankalp-sangle} %linkedin
+
+% ------------------FONT STUFF---------------------
+\usepackage[sfdefault]{FiraSans}
+\usepackage[sfdefault]{roboto}
+\usepackage[sfdefault]{noto-sans}
+\usepackage[default]{sourcesanspro}
+
+\begin{document}
+
+%----------HEADING-----------------
+\input{content/heading.tex}
+
+%-----------EDUCATION-----------------
+\input{content/education.tex}
+
+%-----------EXPERIENCE-----------------
+\input{content/experience}
+
+%-----------PROJECTS-----------------
+\input{content/projects.tex}
+
+%-----------SKILLS-----------------
+\input{content/skills.tex}
+
+%-----------ADDITIONAL DETAILS-----------------
+\input{content/additional.tex}
+
+% \section{Positions of Responsibility}
+% \vspace{-0.4mm}
+
+% \resumeSubHeadingListStart
+% \resumePOR{\textbf{Title, Organization 1}} % Position
+% {Work done}{\raisebox{0.75pt}{2021 - 2022}}
+% \vspace{0.5mm}
+% \resumePOR{\textbf{Title, Organization 2}}
+% {Work done}
+% {\raisebox{0.75pt}{2018 - 2019}}
+% \vspace{-1mm}
+% \resumeSubHeadingListEnd
+% \hspace*{-2mm}\rule{1.030\textwidth}{0.1mm}
+% \vspace{0mm}
+
+%-------------------------------------------
+\end{document}
+

@@ -1,2 +1,4 @@
 # Ignore Latex-related files
 main.*
+# Keep main.tex
+!main.tex
