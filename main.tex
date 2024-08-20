@@ -62,25 +62,33 @@
         \hspace{-4.4mm} \small\textbf{#1} & {\footnotesize{\emph{#3}}}\vspace{-1.2mm}\\
         \hspace{-4.3mm} \footnotesize{\text{#2}} & \footnotesize{#4}
     \end{tabular*}
-    \vspace{-6.1mm}
+    \vspace{-7.1mm}
 }
 
-\newcommand{\resumeProject}[4]{
+\newcommand{\resumeSubExp}[2]{
 \vspace{0mm}\item[]
     \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \hspace{-4.4mm} \small\textbf{#1} & {\footnotesize{#3}}\vspace{-1mm}\\
-        \hspace{-4.3mm} \footnotesize{\text{#2}} & \footnotesize{#4}
+        \hspace{-4.3mm} \footnotesize{\text{#1}} & \footnotesize{\emph{#2}}
     \end{tabular*}
-    \vspace{-6.5mm}
+    \vspace{-10.1mm}
 }
 
-\newcommand{\resumeEdu}[4]{
+\newcommand{\resumeProject}[3]{
 \vspace{0mm}\item[]
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \hspace{-4.3mm} \small\textbf{#1} & \footnotesize{\emph{#3}}\vspace{-1mm} \\
-        \hspace{-4.3mm} \footnotesize{#2} & \footnotesize{#4}
-    \end{tabular*}
-    \vspace{-3.2mm}
+\begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+\hspace{-4.4mm} \small\textbf{#1}\ifx\relax#2\relax\else\ $|$\ \emph{#2}\fi & {\footnotesize{#3}}\vspace{-1mm}\\
+\end{tabular*}
+\vspace{-9.5mm}
+}
+
+\newcommand{\resumeEdu}[5]{
+\vspace{0mm}\item[]
+\begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+\hspace{-4.3mm} \small\textbf{#1} & \footnotesize{\emph{#3}}\vspace{-1mm} \\
+\hspace{-4.3mm} \footnotesize{#2} & \footnotesize{#4} \\
+\hspace{-4.3mm} \footnotesize{#5} &
+\end{tabular*}
+\vspace{-3.2mm}
 }
 
 \newcommand{\resumeAchieve}[3]
@@ -97,7 +105,7 @@
 \newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=1ex, rightmargin=1ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
 
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2mm}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-1.5mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
 
 \renewcommand{\arraystretch}{1}
 
@@ -142,24 +150,6 @@
 
 %-----------SKILLS-----------------
 \input{content/skills.tex}
-
-%-----------ADDITIONAL DETAILS-----------------
-\input{content/additional.tex}
-
-% \section{Positions of Responsibility}
-% \vspace{-0.4mm}
-
-% \resumeSubHeadingListStart
-% \resumePOR{\textbf{Title, Organization 1}} % Position
-% {Work done}{\raisebox{0.75pt}{2021 - 2022}}
-% \vspace{0.5mm}
-% \resumePOR{\textbf{Title, Organization 2}}
-% {Work done}
-% {\raisebox{0.75pt}{2018 - 2019}}
-% \vspace{-1mm}
-% \resumeSubHeadingListEnd
-% \hspace*{-2mm}\rule{1.030\textwidth}{0.1mm}
-% \vspace{0mm}
 
 %-------------------------------------------
 \end{document}
