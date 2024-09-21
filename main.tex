@@ -34,19 +34,41 @@
 \usepackage{fontawesome}
 \usepackage[most]{tcolorbox}
 
+% Navy blue
+\definecolor{navyblue}{RGB}{0,0,188}
+
 
 % Set the margins
-\geometry{left=0.85cm, top=0.8cm, right=0.85cm, bottom=0.2cm}
+\geometry{left=1.5cm, top=0.8cm, right=1.5cm, bottom=0.2cm}
 
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\fontfamily{ntxtlf}\scshape\bfseries\raggedright\large\color{navyblue}
 }{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
 
 
 %-------------------------
 % Custom commands
+
+\newcommand{\resumePublication}[4]{
+\vspace{0.5mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \hspace{-3.5mm}\fontfamily{ntxtlf}\selectfont\textbf{#1} & \footnotesize{#4} \\
+    \hspace{-3.5mm}\textit{#2} \\
+    \hspace{-3.5mm}#3
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeAward}[2]{
+\vspace{1.5mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \hspace{-3.5mm}\fontfamily{ntxtlf}\selectfont\textbf{#1} \\
+    \hspace{-3.5mm}#2
+    \end{tabular*}
+    \vspace{-0.5mm}
+}
 
 \newcommand{\resumePOR}[3]{
 \vspace{0.5mm}\item[]
@@ -57,28 +79,28 @@
 }
 
 \newcommand{\resumeExp}[4]{
-\vspace{0mm}\item[]
+\vspace{2mm}\item[]
     \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \hspace{-4.4mm} \small\textbf{#1} & {\footnotesize{\emph{#3}}}\vspace{-1.2mm}\\
+        \hspace{-4.4mm} \small\fontfamily{ntxtlf}\selectfont\textbf{#1} & {\footnotesize{\emph{#3}}}\vspace{-0.2mm}\\
         \hspace{-4.3mm} \footnotesize{\text{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-5.1mm}
+}
+
+\newcommand{\resumeSubExp}[2]{
+\vspace{1mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \hspace{-4.3mm} \footnotesize{\text{#1}} & \footnotesize{\emph{#2}}
     \end{tabular*}
     \vspace{-7.1mm}
 }
 
-\newcommand{\resumeSubExp}[2]{
-\vspace{0mm}\item[]
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \hspace{-4.3mm} \footnotesize{\text{#1}} & \footnotesize{\emph{#2}}
-    \end{tabular*}
-    \vspace{-10.1mm}
-}
-
 \newcommand{\resumeProject}[3]{
-\vspace{0mm}\item[]
+\vspace{2mm}\item[]
 \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-\hspace{-4.4mm} \small\textbf{#1}\ifx\relax#2\relax\else\ $|$\ \emph{#2}\fi & {\footnotesize{#3}}\vspace{-1mm}\\
+\hspace{-4.4mm} \small\fontfamily{ntxtlf}\selectfont\textbf{#1}\ifx\relax#2\relax\else\ $|$\ \emph{#2}\fi & {\footnotesize{#3}}\vspace{-1mm}\\
 \end{tabular*}
-\vspace{-9.5mm}
+\vspace{-8.5mm}
 }
 
 \newcommand{\resumeEdu}[4]{
@@ -92,7 +114,7 @@
 
 \newcommand{\resumeAchieve}[3]
 {
-\hspace{-3.1mm}\textbf{ #1} & {#2} & \hspace{3mm}\footnotesize{#3}
+\hspace{-3.5mm}\textbf{ #1} & {#2} & \hspace{3mm}\footnotesize{#3}
 \vspace{0mm}\\
 }
 
@@ -133,6 +155,8 @@
 \usepackage[sfdefault]{roboto}
 \usepackage[sfdefault]{noto-sans}
 \usepackage[default]{sourcesanspro}
+\usepackage{newtxmath, newtxtext}
+\renewcommand{\familydefault}{\sfdefault}
 
 \begin{document}
 
@@ -145,11 +169,19 @@
 %-----------EDUCATION-----------------
 \input{content/education.tex}
 
+%-----------VOLUNTEERING AND LEADERSHIP-----------------
+\input{content/volunteering_and_leadership.tex}
+
+\newpage
+
 %-----------RESEARCH AND PUBLICATIONS-----------------
 \input{content/research_and_publications.tex}
 
-%-----------SKILLS-----------------
-\input{content/skills.tex}
+% AWARDS
+\input{content/awards.tex}
+
+% CERTIFICATIONS
+\input{content/certifications.tex}
 
 %-------------------------------------------
 \end{document}
